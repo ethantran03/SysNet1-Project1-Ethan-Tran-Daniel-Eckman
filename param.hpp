@@ -7,9 +7,9 @@ class Param {
 private:
     char *inputRedirect;            // filename or NULL
     char *outputRedirect;           // filename or NULL
-    int background;                 // 0 = false, 1 = true
+    int background;                 // run the program in the background, 0 = false, 1 = true
     int argumentCount;              // number of tokens
-    char *argumentVector[MAXARGS];  // array of strings
+    char *argumentVector[MAXARGS];  // array of strings from input line
 
 public:
     Param();
@@ -26,8 +26,8 @@ public:
     int getArgumentCount() const;
     char** getArgumentVector();
 
-    void clear();
-    void printParams();
+    void clear();                   // clear all parameters
+    void printParams();             // print parameters for debugging
 };
 
 #endif
